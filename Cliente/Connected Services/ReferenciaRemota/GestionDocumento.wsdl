@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GestionDocumento" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62441/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62441/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62441/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGestionDocumento_LeerCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerCargo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerTitulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerTitulo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerTitulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerTituloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerOrganizacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerOrganizacion" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerOrganizacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerOrganizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerCategoriaCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerCategoriaCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerCategoriaCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerCategoriaCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerGrupoCosto_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeerGrupoCosto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_LeerGrupoCosto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeerGrupoCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarOrganizacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarOrganizacion" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarOrganizacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarOrganizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarCargo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarCategoriaCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarCategoriaCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarCategoriaCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarCategoriaCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarGrupoCosto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarGrupoCosto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarGrupoCosto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarGrupoCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarTitulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarTitulo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_AgregarTitulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarTituloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarOrganizacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarOrganizacion" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarOrganizacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarOrganizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCargo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarCategoriaCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCategoriaCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarCategoriaCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCategoriaCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarGrupoCosto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarGrupoCosto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarGrupoCosto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarGrupoCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarTitulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTitulo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EliminarTitulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarTituloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarOrganizacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarOrganizacion" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarOrganizacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarOrganizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarOrg_Nombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarOrg_Nombre" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarOrg_Nombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarOrg_NombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarOrg_Direccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarOrg_Direccion" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarOrg_Direccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarOrg_DireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCargo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarCategoriaCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCategoriaCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarCategoriaCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarCategoriaCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarGrupoCosto_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarGrupoCosto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarGrupoCosto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarGrupoCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarTitulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTitulo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_BuscarTitulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarTituloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarContacto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarOrganizacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarOrganizacion" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarOrganizacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarOrganizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarCargo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarCategoriaCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarCategoriaCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarCategoriaCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarCategoriaCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarGrupoCosto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarGrupoCosto" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarGrupoCosto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarGrupoCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarTitulo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarTitulo" />
+  </wsdl:message>
+  <wsdl:message name="IGestionDocumento_EditarTitulo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarTituloResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGestionDocumento">
+    <wsdl:operation name="LeerCargo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/LeerCargo" message="tns:IGestionDocumento_LeerCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/LeerCargoResponse" message="tns:IGestionDocumento_LeerCargo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerTitulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/LeerTitulo" message="tns:IGestionDocumento_LeerTitulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/LeerTituloResponse" message="tns:IGestionDocumento_LeerTitulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerProvincia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/LeerProvincia" message="tns:IGestionDocumento_LeerProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/LeerProvinciaResponse" message="tns:IGestionDocumento_LeerProvincia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/LeerContacto" message="tns:IGestionDocumento_LeerContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/LeerContactoResponse" message="tns:IGestionDocumento_LeerContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerOrganizacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/LeerOrganizacion" message="tns:IGestionDocumento_LeerOrganizacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/LeerOrganizacionResponse" message="tns:IGestionDocumento_LeerOrganizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerCategoriaCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/LeerCategoriaCorreo" message="tns:IGestionDocumento_LeerCategoriaCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/LeerCategoriaCorreoResponse" message="tns:IGestionDocumento_LeerCategoriaCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeerGrupoCosto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/LeerGrupoCosto" message="tns:IGestionDocumento_LeerGrupoCosto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/LeerGrupoCostoResponse" message="tns:IGestionDocumento_LeerGrupoCosto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarContacto" message="tns:IGestionDocumento_AgregarContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarContactoResponse" message="tns:IGestionDocumento_AgregarContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarOrganizacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarOrganizacion" message="tns:IGestionDocumento_AgregarOrganizacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarOrganizacionResponse" message="tns:IGestionDocumento_AgregarOrganizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProvincia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarProvincia" message="tns:IGestionDocumento_AgregarProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarProvinciaResponse" message="tns:IGestionDocumento_AgregarProvincia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCargo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarCargo" message="tns:IGestionDocumento_AgregarCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarCargoResponse" message="tns:IGestionDocumento_AgregarCargo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCategoriaCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarCategoriaCorreo" message="tns:IGestionDocumento_AgregarCategoriaCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarCategoriaCorreoResponse" message="tns:IGestionDocumento_AgregarCategoriaCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarGrupoCosto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarGrupoCosto" message="tns:IGestionDocumento_AgregarGrupoCosto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarGrupoCostoResponse" message="tns:IGestionDocumento_AgregarGrupoCosto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarTitulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarTitulo" message="tns:IGestionDocumento_AgregarTitulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/AgregarTituloResponse" message="tns:IGestionDocumento_AgregarTitulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarContacto" message="tns:IGestionDocumento_EliminarContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarContactoResponse" message="tns:IGestionDocumento_EliminarContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarOrganizacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarOrganizacion" message="tns:IGestionDocumento_EliminarOrganizacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarOrganizacionResponse" message="tns:IGestionDocumento_EliminarOrganizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProvincia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarProvincia" message="tns:IGestionDocumento_EliminarProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarProvinciaResponse" message="tns:IGestionDocumento_EliminarProvincia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCargo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarCargo" message="tns:IGestionDocumento_EliminarCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarCargoResponse" message="tns:IGestionDocumento_EliminarCargo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoriaCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarCategoriaCorreo" message="tns:IGestionDocumento_EliminarCategoriaCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarCategoriaCorreoResponse" message="tns:IGestionDocumento_EliminarCategoriaCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarGrupoCosto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarGrupoCosto" message="tns:IGestionDocumento_EliminarGrupoCosto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarGrupoCostoResponse" message="tns:IGestionDocumento_EliminarGrupoCosto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTitulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarTitulo" message="tns:IGestionDocumento_EliminarTitulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EliminarTituloResponse" message="tns:IGestionDocumento_EliminarTitulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarContacto" message="tns:IGestionDocumento_BuscarContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarContactoResponse" message="tns:IGestionDocumento_BuscarContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarOrganizacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarOrganizacion" message="tns:IGestionDocumento_BuscarOrganizacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarOrganizacionResponse" message="tns:IGestionDocumento_BuscarOrganizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarOrg_Nombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarOrg_Nombre" message="tns:IGestionDocumento_BuscarOrg_Nombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarOrg_NombreResponse" message="tns:IGestionDocumento_BuscarOrg_Nombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarOrg_Direccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarOrg_Direccion" message="tns:IGestionDocumento_BuscarOrg_Direccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarOrg_DireccionResponse" message="tns:IGestionDocumento_BuscarOrg_Direccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarProvincia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarProvincia" message="tns:IGestionDocumento_BuscarProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarProvinciaResponse" message="tns:IGestionDocumento_BuscarProvincia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCargo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarCargo" message="tns:IGestionDocumento_BuscarCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarCargoResponse" message="tns:IGestionDocumento_BuscarCargo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarCategoriaCorreo" message="tns:IGestionDocumento_BuscarCategoriaCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarCategoriaCorreoResponse" message="tns:IGestionDocumento_BuscarCategoriaCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarGrupoCosto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarGrupoCosto" message="tns:IGestionDocumento_BuscarGrupoCosto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarGrupoCostoResponse" message="tns:IGestionDocumento_BuscarGrupoCosto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTitulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarTitulo" message="tns:IGestionDocumento_BuscarTitulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/BuscarTituloResponse" message="tns:IGestionDocumento_BuscarTitulo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EditarContacto" message="tns:IGestionDocumento_EditarContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EditarContactoResponse" message="tns:IGestionDocumento_EditarContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarOrganizacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EditarOrganizacion" message="tns:IGestionDocumento_EditarOrganizacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EditarOrganizacionResponse" message="tns:IGestionDocumento_EditarOrganizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarProvincia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EditarProvincia" message="tns:IGestionDocumento_EditarProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EditarProvinciaResponse" message="tns:IGestionDocumento_EditarProvincia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarCargo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EditarCargo" message="tns:IGestionDocumento_EditarCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EditarCargoResponse" message="tns:IGestionDocumento_EditarCargo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarCategoriaCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EditarCategoriaCorreo" message="tns:IGestionDocumento_EditarCategoriaCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EditarCategoriaCorreoResponse" message="tns:IGestionDocumento_EditarCategoriaCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarGrupoCosto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EditarGrupoCosto" message="tns:IGestionDocumento_EditarGrupoCosto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EditarGrupoCostoResponse" message="tns:IGestionDocumento_EditarGrupoCosto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarTitulo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGestionDocumento/EditarTitulo" message="tns:IGestionDocumento_EditarTitulo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGestionDocumento/EditarTituloResponse" message="tns:IGestionDocumento_EditarTitulo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGestionDocumento" type="tns:IGestionDocumento">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LeerCargo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/LeerCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerTitulo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/LeerTitulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerProvincia">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/LeerProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerContacto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/LeerContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerOrganizacion">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/LeerOrganizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerCategoriaCorreo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/LeerCategoriaCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeerGrupoCosto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/LeerGrupoCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarContacto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/AgregarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarOrganizacion">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/AgregarOrganizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProvincia">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/AgregarProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCargo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/AgregarCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarCategoriaCorreo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/AgregarCategoriaCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarGrupoCosto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/AgregarGrupoCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarTitulo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/AgregarTitulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarContacto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EliminarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarOrganizacion">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EliminarOrganizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProvincia">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EliminarProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCargo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EliminarCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoriaCorreo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EliminarCategoriaCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarGrupoCosto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EliminarGrupoCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarTitulo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EliminarTitulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarContacto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarOrganizacion">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarOrganizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarOrg_Nombre">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarOrg_Nombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarOrg_Direccion">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarOrg_Direccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarProvincia">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCargo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarCategoriaCorreo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarCategoriaCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarGrupoCosto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarGrupoCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarTitulo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/BuscarTitulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarContacto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EditarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarOrganizacion">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EditarOrganizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarProvincia">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EditarProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarCargo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EditarCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarCategoriaCorreo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EditarCategoriaCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarGrupoCosto">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EditarGrupoCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarTitulo">
+      <soap:operation soapAction="http://tempuri.org/IGestionDocumento/EditarTitulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GestionDocumento">
+    <wsdl:port name="BasicHttpBinding_IGestionDocumento" binding="tns:BasicHttpBinding_IGestionDocumento">
+      <soap:address location="http://localhost:62441/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

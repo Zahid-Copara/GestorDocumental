@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCargo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cargo" nillable="true" type="tns:Cargo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCargo" nillable="true" type="tns:ArrayOfCargo" />
+  <xs:complexType name="Cargo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idCargo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cargo" nillable="true" type="tns:Cargo" />
+  <xs:complexType name="ArrayOfTitulo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Titulo" nillable="true" type="tns:Titulo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTitulo" nillable="true" type="tns:ArrayOfTitulo" />
+  <xs:complexType name="Titulo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idTitulo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Titulo" nillable="true" type="tns:Titulo" />
+  <xs:complexType name="ArrayOfProvincia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Provincia" nillable="true" type="tns:Provincia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProvincia" nillable="true" type="tns:ArrayOfProvincia" />
+  <xs:complexType name="Provincia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idProvincia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Provincia" nillable="true" type="tns:Provincia" />
+  <xs:complexType name="ArrayOfContacto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contacto" nillable="true" type="tns:Contacto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContacto" nillable="true" type="tns:ArrayOfContacto" />
+  <xs:complexType name="Contacto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Celular" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorreoElectronico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idCargo" type="xs:int" />
+      <xs:element minOccurs="0" name="idContacto" type="xs:int" />
+      <xs:element minOccurs="0" name="idTitulo" type="xs:int" />
+      <xs:element minOccurs="0" name="numCedula" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contacto" nillable="true" type="tns:Contacto" />
+  <xs:complexType name="ArrayOfOrganizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Organizacion" nillable="true" type="tns:Organizacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrganizacion" nillable="true" type="tns:ArrayOfOrganizacion" />
+  <xs:complexType name="Organizacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoPostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Correo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SitioWeb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idOrganizacion" type="xs:int" />
+      <xs:element minOccurs="0" name="idProvincia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Organizacion" nillable="true" type="tns:Organizacion" />
+  <xs:complexType name="ArrayOfCategoriaCorreo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CategoriaCorreo" nillable="true" type="tns:CategoriaCorreo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategoriaCorreo" nillable="true" type="tns:ArrayOfCategoriaCorreo" />
+  <xs:complexType name="CategoriaCorreo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idCategoriaCorreo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoriaCorreo" nillable="true" type="tns:CategoriaCorreo" />
+  <xs:complexType name="ArrayOfGrupoCostos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GrupoCostos" nillable="true" type="tns:GrupoCostos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGrupoCostos" nillable="true" type="tns:ArrayOfGrupoCostos" />
+  <xs:complexType name="GrupoCostos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idGrupoCostos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GrupoCostos" nillable="true" type="tns:GrupoCostos" />
+</xs:schema>
